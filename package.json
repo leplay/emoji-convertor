@@ -1,0 +1,31 @@
+{
+  "name": "emoji-convertor",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "fetch": "curl https://raw.githubusercontent.com/iamcal/emoji-data/master/emoji_pretty.json --output emoji.json",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leplay/emoji-convertor.git"
+  },
+  "keywords": [
+    "emoji",
+    "emoticon",
+    "convertor"
+  ],
+  "author": "leplay <leqcany@gmail.com> (https://github.com/leplay)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leplay/emoji-convertor/issues"
+  },
+  "homepage": "https://github.com/leplay/emoji-convertor#readme",
+  "dependencies": {
+    "emoji-regex": "^8.0.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
