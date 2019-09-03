@@ -1,23 +1,7 @@
 const emojiRegex = require('emoji-regex')
 const regex = emojiRegex()
-let config = require('./emoji.json')
-
-const unifiedMeta = {}
-const nameMeta = {}
-
-config.forEach(function (item) {
-  unifiedMeta[item.unified] = {
-    name: item.name,
-    shortName: item.short_name,
-    category: item.category
-  }
-  nameMeta[item.short_name] = {
-    name: item.name,
-    unified: item.unified,
-    category: item.category
-  }
-})
-config = null
+const unifiedMeta = require('./emoji-unified')
+const nameMeta = require('./emoji-name')
 
 const nativeToUnified = function (nativeEmoji) {
   const matchEmoji = nativeEmoji.match(regex)
